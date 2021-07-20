@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/edit.html/{{Trees.id}}" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="Month">Month/label>
+            <input id="Month" type="text" class="form-control" placeholder="Month" name="Month" value="{{Trees.Month}}">
+        </div>
+        <div class="col">
+            <label for="Grith_(in)">Grith_(in)</label>
+            <input id="Grith_(in)" type="text" class="form-control" placeholder="City Abbreviation"
+                   name="Grith_(in)" value="{{Trees.Grith_(in)}}">
+        </div>
+        <div class="col">
+            <label for="Height">City Country</label>
+            <input id="fldCountry" type="text" class="form-control" placeholder="City Country" name="fldCountry" value="{{city.fldCountry}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="fldLat">City Latitude</label>
+            <input id="fldLat" type="text" class="form-control" placeholder="City Latitude" name="fldLat" value="{{city.fldLat}}">
+        </div>
+        <div class="col">
+            <label for="fldlong">City Longitude</label>
+            <input id="fldlong" type="text" class="form-control" placeholder="City Longitude" name="fldLong" value="{{city.fldLong}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="fldCapitalStatus">Capital Status</label>
+
+            <input id="fldCapitalStatus" type="text" class="form-control" placeholder="Capital Status"
+                   name="fldCapitalStatus" value="{{city.fldCapitalStatus}}">
+        </div>
+        <div class="col">
+            <label for="fldPopulation">City Population</label>
+            <input id="fldPopulation" type="text" class="form-control" placeholder="Population" name="fldPopulation" value="{{city.fldPopulation}}">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+{% endblock %}
